@@ -1,0 +1,25 @@
+@import "../src/assets/Styles/Header.scss";
+@import "../src/assets/Styles/Hero.scss";
+@import "../src/assets/Styles/Order.scss";
+@import "../src/assets/Styles/Works.scss";
+@import "../src/assets/Styles/InterFace.scss";
+@import "../src/assets/Styles/Contacts.scss";
+@import "../src/assets/Styles/Visit.scss";
+@import "../src/assets/Styles/Footer.scss";
+@import "../src/assets/Styles/ProductCard.scss";
+@import "../src/assets/Styles/Product.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #222121;
+}

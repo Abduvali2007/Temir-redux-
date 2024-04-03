@@ -1,0 +1,14 @@
+#hero {
+  // height: 1900px;
+  padding-top: 190px;
+  background: rgb(109, 107, 107);
+  background: radial-gradient(
+    circle,
+    rgba(109, 107, 107, 1) 0%,
+    rgba(101, 99, 99, 1) 0%,
+    rgba(0, 0, 0, 1) 33%,
+    rgba(14, 11, 11, 1) 59%,
+    rgba(14, 11, 11, 1) 86%,
+    rgba(14, 11, 11, 1) 88%
+  );
+}
