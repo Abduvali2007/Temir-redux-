@@ -40,7 +40,7 @@ const Header = () => {
           <Link className=" relative" to={"/basket"}>
             <TbShoppingBagPlus className="text-white text-3xl" />
             {basket.length ? (
-              <h1 className=" flex items-center justify-center absolute left-7 top-5 text-yellow-600 font-black  text-[20px] bg-green-600 w-4 h-4 rounded-[50%] ">
+              <h1 className=" flex items-center justify-center absolute left-7 top-5 text-yellow-600 font-black  text-[20px] bg-green-600 w-6 h-6 rounded-[50%] ">
                 {basket.length}
               </h1>
             ) : null}

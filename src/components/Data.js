@@ -8,6 +8,7 @@ export const data = [
     title: "Premium Smart Card",
     price: 400,
     image: img1,
+    quantity:1
   },
 
   {
@@ -21,17 +22,20 @@ export const data = [
     title: "Premium Smart Card",
     price: 300,
     image: img3,
+    quantity:1
   },
   {
     id: 4,
     title: "Premium Smart Card",
     price: 299,
     image: img1,
+    quantity:1
   },
   {
     id: 5,
     title: "Premium Smart Card",
     price: 500,
     image: img2,
+    quantity:1
   },
 ];

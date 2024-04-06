@@ -3,6 +3,7 @@ let initstate = {
   productsAll: JSON.parse(localStorage.getItem("pro")) || [],
   temirCard: [],
   basket: [],
+  InValue: [],
 };
 export const Reducer = (state = initstate, action) => {
   switch (action.type) {
@@ -22,10 +23,37 @@ export const Reducer = (state = initstate, action) => {
         basket: [...state.basket, action.payload],
       };
     case "DELETE":
-      let filterDel = state.basket.filter((el) => el.id !== action.payload.id)
+      let filterDel = state.basket.filter((el) => el.id !== action.payload.id);
       return {
         ...state,
         basket: filterDel,
+      };
+    case "CHANGE_VALUE":
+      return {
+        ...state,
+        InValue: action.payload,
+      };
+    case "PLUS":
+      return {
+        ...state,
+        basket: [
+          ...state.basket.map((el) =>
+            el.id === action.payload.id
+              ? { ...el, quantity: el.quantity + 1 }
+              : el
+          ),
+        ],
+      };
+    case "MINUS":
+      return {
+        ...state,
+        basket: [
+          ...state.basket.map((el) =>
+            el.id === action.payload.id
+              ? { ...el, quantity: el.quantity > 1 ? el.quantity - 1 : 1 }
+              : el
+          ),
+        ],
       };
     default:
       return state;
