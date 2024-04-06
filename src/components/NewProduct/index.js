@@ -8,10 +8,10 @@ const NewProduct = () => {
   return (
     <div className="">
       <div className="container">
-        <div className=" flex item-center justify-between flex-wrap mt-7">
+        <div className=" flex item-center justify-between flex-wrap  py-11">
           {productsAll.map((el) => (
             <div className=" w-[400px] h-[300px] bg-slate-100 flex items-center justify-center flex-col rounded-[10px]">
-              <img src={el.image} alt="img" />
+              <img classNamesrc={el.image} alt="img" />
               <h1>
                 {el.title}/{el.id}
               </h1>

@@ -1,14 +1,29 @@
 import React, { useState } from "react";
 import carta from "../../../assets/Img/Products/image 35.png";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+
+
+
 const ProductCard = ({ el }) => {
   const [over, setOver] = useState(false);
   const dispatch = useDispatch();
   const addProduct = (main) => {
     dispatch({ type: "NEW_PRODUCT", payload: main });
+    dispatch({ type: "TEMIR_CARD", payload: main });
+    nav(`/temircard/${el.id}`) 
+  
   };
+  const nav = useNavigate();
+
+
   return (
-    <div className="pro flex items-center justify-center flex-col w-[800px] h-[600px] mt-8">
+    <div
+      onMouseOver={() => setOver(true)}
+      onMouseOut={() => setOver(false)}
+      className="pro flex items-center justify-center flex-col w-[800px] h-[600px] mt-8"
+    >
       <img
         style={{
           transform: over ? "rotate(90deg)" : "rotate(0deg)",
@@ -17,9 +32,9 @@ const ProductCard = ({ el }) => {
           marginLeft: over ? "-10px" : "0",
           transition: "1s",
         }}
-        onMouseOver={() => setOver(true)}
-        onMouseOut={() => setOver(false)}
-        src={carta}
+        // onMouseOver={() => setOver(true)}
+        // onMouseOut={() => setOver(false)}
+        src={el.image}
         alt="img"
       />
       <div
